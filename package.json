@@ -1,0 +1,17 @@
+{
+  "name": "tempbin",
+  "version": "1.0.0",
+  "description": "A js based pastebin with temporary pastes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Blocks_n_more",
+  "license": "ISC",
+  "dependencies": {
+    "@replit/database": "^2.0.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "ms": "^2.1.2"
+  }
+}

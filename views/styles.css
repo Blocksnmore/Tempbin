@@ -1,0 +1,57 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat';
+    text-align: center;
+}
+input {
+    width: 100%;
+    height: 5%;
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+textarea {
+    width: 100%;
+    height: 50%;
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+code {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    border-radius: 8px;
+    border: 1px;
+    width: 80%;
+    height: max-content;
+    font-size: 30px;
+    padding: 10px 32px;
+    display: inline-block;
+}
+a{
+    color: white;
+}
+.button {
+    border: 2px solid rgb(54, 54, 54);
+    background-color: rgb(54, 54, 54);
+    color: white;
+    padding: 15px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.button:hover{
+    border: 2px solid rgb(97, 97, 97);
+}

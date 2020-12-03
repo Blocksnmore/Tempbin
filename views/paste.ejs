@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/styles.css" />
+<!DOCTYPE html>
+<meta property="og:site_name" content="Tempbin"/>
+<meta property="og:title" content="Tempbin Paste"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/"/>
+<meta property="og:image" content="/favicon.ico"/>
+<meta name="theme-color" content="#333333">
+<title>Tempbin paste</title>
+<% if(pastedata !== undefined && pastedata !== null){ %>
+    <meta property="og:description" content="Tempbin paste \n<%= pastedata.title%>"/>
+    <h2>Paste: <u><%= pastedata.title%></u></h2>
+    <br><br>
+    <code><%= pastedata.paste%></code>
+<% } else { %>
+    <h2>Unknown paste!</h2>
+    <h3>The paste couldn't be found!</h3>
+    <h3>Either this paste doesn't exsist or it's been deleted.</h3>
+    <br>
+    <h3><a href="/" class="button">Take me home</a></h3>
+    <meta property="og:description" content="Unknown tempbin post"/>
+<% } %>
