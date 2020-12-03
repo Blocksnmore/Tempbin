@@ -46,6 +46,7 @@ function randomInt(min, max) {
 
 app.listen(process.env.port, async () => {
   let allPastes = await db.list();
+  console.log(allPastes) // Debugging to make sure pastes get deleted
   allPastes.forEach(async (paste) => {
     let pastedata = await db.get(paste);
     setTimeout(async function () {
