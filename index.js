@@ -44,7 +44,7 @@ function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-app.listen(process.env.port)/*, async () => {
+app.listen(process.env.port, async () => {
   let allPastes = await db.list();
   allPastes.forEach(async (paste) => {
     let pastedata = await db.get(paste);
@@ -52,4 +52,4 @@ app.listen(process.env.port)/*, async () => {
       db.delete(paste);
     }, Math.max(pastedata.expiretime - Date.now(), 10));
   });
-});*/
+});
