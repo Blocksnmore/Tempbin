@@ -14,6 +14,7 @@ If you plan to run this on a diffrent service you will need to modify the source
 |---|---|
 | Blocks_n_more | Developing tempbin and bug testing |
 | Replit | Providing free hosting as well as a db |
+| Adxmgg | Bug testing |
 
 # License: 
 I personally don't license my code but if you do use it please at least credit me for my work

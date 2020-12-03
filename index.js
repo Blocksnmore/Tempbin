@@ -1,7 +1,6 @@
 const express = require("express");
 const databaselib = require("@replit/database");
-const ms = require("ms");
-const expiretime = ms("1w");
+const expiretime = require("ms")("1w");
 
 const db = new databaselib();
 const app = express();
