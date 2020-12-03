@@ -53,9 +53,14 @@ app.listen(process.env.port, async () => {
   //db.empty();
   console.log(allPastes) // Debugging to make sure pastes get deleted
   allPastes.forEach(async (paste) => {
+    try{
     let pastedata = await db.get(paste);
     setTimeout(async function () {
       db.delete(paste);
     }, Math.max(pastedata.expiretime - Date.now(), 10));
+    }catch{
+      console.log("Corrupted data found in paste "+paste+" removing.")
+      db.delete(paste);
+    }
   });
 });
