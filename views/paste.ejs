@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#333333">
 <title>Tempbin paste</title>
 <% if(pastedata !== undefined && pastedata !== null){ %>
-    <meta property="og:description" content="Tempbin paste \n<%= pastedata.title%>"/>
+    <meta property="og:description" content="Tempbin paste: <%= pastedata.title%>"/>
     <h2>Paste: <u><%= pastedata.title%></u></h2>
     <br><br>
     <code><%= pastedata.paste%></code>

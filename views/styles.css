@@ -33,6 +33,7 @@ textarea {
 code {
     background-color: rgb(65, 65, 65);
     color: white;
+    white-space:pre-wrap;
     border-radius: 8px;
     text-align: left;
     border: 1px;
