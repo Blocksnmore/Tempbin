@@ -39,6 +39,7 @@ code {
     border: 1px;
     width: 80%;
     height: max-content;
+    word-wrap: break-word;
     font-size: 30px;
     padding: 10px 32px;
     display: inline-block;
