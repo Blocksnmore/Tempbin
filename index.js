@@ -23,11 +23,12 @@ app.post("/*", async (req, res) => {
   const path = req.path.substring(1);
   if (path !== "paste") return res.redirect("/");
   let num = await getPasteNum();
-  let jsondata = await {
+  let jsondata = {
     title: req.body.title ? req.body.title : "Untitled paste",
     paste: req.body.paste+"",
     expiretime: Date.now() + expiretime
   };
+  console.log("Post created with id "+num+" and json "+jsondata)
   await db.set("pastedata." + num, jsondata);
   res.redirect("/" + num);
 });
@@ -56,6 +57,7 @@ app.listen(process.env.port, async () => {
     let pastedata = await db.get(paste);
     setTimeout(async function () {
       db.delete(paste);
+      console.log("Deleted paste "+paste)
     }, Math.max(pastedata.expiretime - Date.now(), 10));
     }catch{
       console.log("Corrupted data found in paste "+paste+" removing.")
