@@ -23,15 +23,24 @@ app.post("/*", async (req, res) => {
   const path = req.path.substring(1);
   if (path !== "paste") return res.redirect("/");
   let num = await getPasteNum();
-  let jsondata = {
+  console.log("Post created with id "+num)
+  console.log(cleanseString(req.body.paste+""))
+  await db.set("pastedata." + num, {
     title: req.body.title ? req.body.title : "Untitled paste",
-    paste: req.body.paste+"",
+    paste: cleanseString(req.body.paste+""),
     expiretime: Date.now() + expiretime
-  };
-  console.log("Post created with id "+num+" and json "+jsondata)
-  await db.set("pastedata." + num, jsondata);
+  }
+  );
   res.redirect("/" + num);
 });
+function cleanseString(str){
+  let final = ""
+  final = str.replace(/;/gi, "(thisisasemicolinlolthatineedtodoforfix)") // 
+  /*for ( x of str ) {
+    if ( /[a-zA-Z0-9\`\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\]\\\{\}\:\'\"\,\<\.\>\/\?\s\n]/.test(x) ) final += x
+  }*/
+  return final
+}
 
 async function getPasteNum() {
   let num = await randomInt(1, 9999999);
