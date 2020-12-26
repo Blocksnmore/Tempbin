@@ -13,6 +13,7 @@ If you plan to run this on a diffrent service you will need to modify the source
 | User | Actions |
 |---|---|
 | Blocks_n_more | Developing tempbin and bug testing |
+| RDiamondCreeper | Helping fix a bug relating to pastes being corrupted |
 | Replit | Providing free hosting as well as a db |
 | Adxmgg | Bug testing |
 

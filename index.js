@@ -26,7 +26,7 @@ app.post("/*", async (req, res) => {
   console.log("Post created with id "+num)
   console.log(cleanseString(req.body.paste+""))
   await db.set("pastedata." + num, {
-    title: req.body.title ? req.body.title : "Untitled paste",
+    title: cleanseString(req.body.title ? req.body.title : "Untitled paste"),
     paste: cleanseString(req.body.paste+""),
     expiretime: Date.now() + expiretime
   }
