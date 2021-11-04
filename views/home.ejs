@@ -1,19 +1,33 @@
-<link rel="stylesheet" href="/styles.css">
 <!DOCTYPE html>
-<title>Tempbin</title>
-<meta property="og:site_name" content="Tempbin"/>
-<meta property="og:title" content="Tempbin homepage"/>
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="/"/>
-<meta property="og:image" content="/favicon.ico"/>
-<meta property="og:description" content="Tempbin - A simple open source paste service"/>
-<meta name="theme-color" content="#333333">
-<h2>Tempbin paste</h2>
-<h3>A simple open sourced paste service</h3>
-<h4>Pastes created will expire in a week from creation</h4>
-<form method="POST" action="/paste">
-    <input type="text" name="title" id="title" placeholder="Paste title">
-    <textarea name="paste" id="paste" placeholder="Paste content" required></textarea>
-    <br>
-    <button type="submit" class="button">Post</button>
-</form>
+<html lang="en">
+  <head>
+    <title>Tempbin</title>
+    <meta property="og:site_name" content="Tempbin" />
+    <meta property="og:title" content="Tempbin homepage" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
+    <meta property="og:image" content="/favicon.ico" />
+    <meta
+      property="og:description"
+      content="Tempbin - A simple open source paste service"
+    />
+    <meta name="theme-color" content="#333333" />
+		<link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h2>Tempbin paste</h2>
+    <h3>A simple open sourced paste service</h3>
+    <h4>Pastes created will expire in a week from creation</h4>
+    <form method="POST" action="/paste">
+      <input type="text" name="title" id="title" placeholder="Paste title" />
+      <textarea
+        name="paste"
+        id="paste"
+        placeholder="Paste content"
+        required
+      ></textarea>
+      <br />
+      <button type="submit" class="button">Post</button>
+    </form>
+  </body>
+</html>
